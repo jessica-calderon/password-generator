@@ -30,3 +30,29 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// function to generate password 
+function generatePassword() {
+  // password result hold
+  var result = "";
+
+  // user input variable choices
+  var passwordLength = 0;
+  var upperCase;
+  var lowerCase;
+  var numbers;
+  var specialCharacters;
+
+  // initialize
+  passwordLength = 0;
+  pswdCriteria.pswdLength = 0;
+  result = "";
+}
+
+// user prompts functions
+function showPrompts() {
+  lowerCase = confirm("Would you like to use lower case letters?");
+  upperCase = confirm("Would you like to use upper case letters?");
+  numbers = confirm("Would you like to use numbers?");
+  specialCharacters = confirm("Would you like to use special characters?");
+}
