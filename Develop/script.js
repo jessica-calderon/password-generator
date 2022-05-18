@@ -48,6 +48,31 @@ function generatePassword() {
   pswdCriteria.pswdLength = 0;
   result = "";
 }
+// check pw length
+while (passwordLength < 8 || passwordLength > 128) {
+  passwordLength = prompt("How many character would you like your password to be? \nMust be between 8 and 128 characters.");
+}
+// run if user chooses cancel
+if (passwordLength === null) {
+  return "Your secure password";
+}
+// check to make sure field is not left blank
+else {
+  if (!isFinite(passwordLength)) {
+    alert("You didn't enter a number");
+    return "Your secure password";
+  }
+}
+// check pw length
+else {
+  if (passwordLength < 8 || passwordLength > 128) {
+    alert("Your password must be between 8 and 128 characters.");
+    return "Your secure password.";
+  }
+  else {
+
+  }
+}
 
 // user prompts functions
 function showPrompts() {
