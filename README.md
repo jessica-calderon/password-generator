@@ -2,7 +2,7 @@
 
 # Purpose
 A website that randomly generates passwords based on user selected criteria. 
-* Password criteria includes:
+* User selected password criteria can include:
     * 8 - 128 characters
     * numbers
     * lowercase letters
