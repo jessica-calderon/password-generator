@@ -1,7 +1,7 @@
 # Password Generator
 
 # Purpose
-A website that randomly generate a password based on user selected criteria. 
+A website that randomly generates a password based on user selected criteria. 
 * User selected password criteria can include:
     * 8 - 128 characters
     * numbers
