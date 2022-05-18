@@ -47,22 +47,21 @@ function generatePassword() {
   passwordLength = 0;
   pswdCriteria.pswdLength = 0;
   result = "";
-}
+
 // check pw length
 while (passwordLength < 8 || passwordLength > 128) {
   passwordLength = prompt("How many character would you like your password to be? \nMust be between 8 and 128 characters.");
-}
+
 // run if user chooses cancel
 if (passwordLength === null) {
   return "Your secure password";
 }
-// check to make sure field is not left blank
 else {
+  // check to make sure field is not left blank
   if (!isFinite(passwordLength)) {
     alert("You didn't enter a number");
     return "Your secure password";
   }
-}
 // check pw length
 else {
   if (passwordLength < 8 || passwordLength > 128) {
@@ -70,7 +69,27 @@ else {
     return "Your secure password.";
   }
   else {
+    showPrompts();
 
+    // ensure pswdLength === user set length
+    while (pswdCriteria.pswdLength < passwordLength) {
+      // ensure user interacts with criteria
+      if (lowerCase === false && upperCase === false && numbers === false && specialCharacters === false) {
+        alert("You must choose at least one password criteria. \nLowercase, uppercase, numbers, or special characters")
+        showPrompts();
+      }
+      else {
+        // randomly select and add a lowercase from array 
+        // update pswdLength +1
+        if (lowerCase === true && pswdCriteria.pswdLength < passwordLength) {
+          var low = pswdCriteria.pswdLength[Math.floor(Math.random() * 26)]
+          result = result + low;
+          pswdCriteria.pswdLength++;
+        }
+      }
+     }
+     }
+    }
   }
 }
 
